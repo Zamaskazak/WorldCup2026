@@ -1,15 +1,21 @@
-WorldCup
+Hola Profe, soy Tomas Joaquin Lopez y le entrego los cambios y correciones del projecto:
 
-La aplicación WorldCup tiene algunos errores que deben ser corregidos:
+GrupoView.kt:
 
-1- La primer pantalla muestra un mensaje "cargando" mientras carga los datos, deberia mostrar un CircularProgressIndicator (2 Punto)
+Reemplaze el texto simple "Cargando..." por el componente Cargando() que contiene el CircularProgressIndicator.
 
-2- El logo usado en el background de la primer pantalla es de un mundial viejo, asegurarse de usar el correcto (1 Punto)
+Se cambió la imagen de fondo R.drawable.logo_viejo por R.drawable.logo.
 
-3- Las cards llevan como titulo el nombre del grupo por ejemplo "Grupo A", pero se esta mostrando "grupo.name" (1 Punto)
+Corregí el título de las tarjetas: de la cadena literal "grupo.name" a la variable grupo.name.
 
-4- Cuando se accede al detalle de un grupo siempre muestra los datos del grupo J (3 Puntos)
+RouterImpl.kt:
 
-5- El NavBar esta de color verde en la pantalla de detalle del grupo (1 Punto)
+Ahora la navegación para que use el groupId dinámico en lugar de navegar siempre al grupo "J".
 
-6- El boton para ir para atras no esta funcionando (2 Puntos)
+DetalleView.kt:
+
+Cambie el color de fondo de la TopAppBar (containerColor) de Color.Green a MaterialTheme.colorScheme.primaryContainer para que coincida con el tema de la aplicación.
+
+DetalleViewModel.kt:
+
+Ahora esta implementada la llamada a la función irParaAtras() dentro del when para que el botón de volver funcione correctamente.
